@@ -32,13 +32,41 @@ export class EditarComponent implements OnInit {
         Validators.required,
         Validators.maxLength(10)
       ])],
+
+      telefone: [this.paciente.telefone, Validators.compose([
+        Validators.required
+      ])],
+
+      cep: [this.paciente.cep, Validators.compose([
+        Validators.required
+      ])],
+
       email: [this.paciente.email, Validators.compose([
         Validators.required,
         Validacoes.ValidaEmail
       ])],
-      crm: [this.paciente.crm, Validators.compose([
+
+
+      
+      logradouro: [this.paciente.logradouro, Validators.compose([
         Validators.required
       ])],
+
+
+      complemento: [this.paciente.complemento, Validators.compose([
+        Validators.required
+      ])],
+
+      
+      bairro: [this.paciente.bairro, Validators.compose([
+        Validators.required
+      ])],
+
+
+      uf: [this.paciente.uf, Validators.compose([
+        Validators.required
+      ])],
+     
     });
 
     this.formulario.valueChanges
